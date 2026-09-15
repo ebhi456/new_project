@@ -20,6 +20,14 @@ app.add_middleware(
 )
 
 
+@app.get("/")
+def root():
+    return {
+        "message": "Enterprise Employee Platform API",
+        "status": "running"
+    }
+
+
 @app.get("/health")
 def health():
     return {
